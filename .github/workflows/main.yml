@@ -25,4 +25,4 @@ jobs:
 
     - name: Run setup script
       run: |
-        ssh -i private_key -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_USER }} 'sudo sh /my_python_file.py > output.txt'
+        ssh -i private_key -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'sudo sh /my_python_file.py > output.txt'
